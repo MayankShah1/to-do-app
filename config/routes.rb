@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'to_do_lists#index'
+  resources :to_do_lists
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
