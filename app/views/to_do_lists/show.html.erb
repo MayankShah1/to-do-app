@@ -10,5 +10,13 @@
   <%= @to_do_list.description %>
 </p>
 
+<!-- To show option for to_do_item -->
+<div id = "to_do_item">
+  <%= render @to_do_list.to_do_items %>
+  <div id = "to_do_item_form">
+    <%= render "to_do_items/form" %>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_to_do_list_path(@to_do_list) %> |
 <%= link_to 'Back', to_do_lists_path %>
