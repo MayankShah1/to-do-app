@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
   resources :to_do_lists do
-    resources :to_do_items
+    resources :to_do_items do
+      member do
+        patch :complete
+      end
+    end
   end
   
   root 'to_do_lists#index'
